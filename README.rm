@@ -1,0 +1,21 @@
+Színkeverő alkalmazás (KD_RGBColorApp)
+
+Készítette: Kékesi Dániel
+
+Feladat leírása:
+A program RGB színkeverést tesz lehetővé, a kiválasztott színt mutatja és el tudja menteni fájlba. Képes véletlenszerű színt generálni, HEX színt RGB-re átváltani, és mutatja az aktuális szín világosságát. Tkinteres grafikus felület, eseménykezeléssel, saját KD_modul.py, saját osztály, fájlkezelés.
+
+Használt modulok és fontosabb függvények:
+- math (round, floor, ceil – színgenerálás, világosság)
+- tkinter (Canvas, Scale, Entry, Button, Label)
+- KD_modul.py:
+  - KD_ColorManager (KD_save_color_to_file, KD_generate_random_color, KD_hex_to_rgb, KD_calculate_brightness)
+
+Osztály:
+- KD_ColorManager
+
+Fájlkezelés:
+- saved_colors.txt fájl keletkezik mentéskor
+
+Indítás:
+- main.py
