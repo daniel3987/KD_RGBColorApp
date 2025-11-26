@@ -1,21 +1,39 @@
-Színkeverő alkalmazás (KD_RGBColorApp)
+# Színkeverő alkalmazás (KD_RGBColorApp)
 
-Készítette: Kékesi Dániel
+**Készítette:** Kékesi Dániel
 
-Feladat leírása:
-A program RGB színkeverést tesz lehetővé, a kiválasztott színt mutatja és el tudja menteni fájlba. Képes véletlenszerű színt generálni, HEX színt RGB-re átváltani, és mutatja az aktuális szín világosságát. Tkinteres grafikus felület, eseménykezeléssel, saját KD_modul.py, saját osztály, fájlkezelés.
+## Feladat leírása
+Az alkalmazás egy egyszerű RGB színkeverő grafikus program.  
+Három csúszka segítségével (piros, zöld, kék) lehet beállítani a színt, amely megjelenik egy színes mezőben.  
+A program tud:
+- véletlenszerű RGB színt generálni,
+- HEX színt RGB-vé átalakítani,
+- kiszámítani az aktuális szín világosságát,
+- az RGB színt HSV-re átalakítani, majd vissza RGB-re (colorsys modul).
 
-Használt modulok és fontosabb függvények:
-- math (round, floor, ceil – színgenerálás, világosság)
-- tkinter (Canvas, Scale, Entry, Button, Label)
-- KD_modul.py:
-  - KD_ColorManager (KD_save_color_to_file, KD_generate_random_color, KD_hex_to_rgb, KD_calculate_brightness)
+A kiválasztott színeket fájlba is el tudja menteni.
 
-Osztály:
-- KD_ColorManager
+## Használt modulok és függvények
 
-Fájlkezelés:
-- saved_colors.txt fájl keletkezik mentéskor
+- **math**
+  - `floor`, `ceil`, `round`
 
-Indítás:
-- main.py
+
+- **tkinter**
+  - `Tk`, `Scale`, `Canvas`, `Label`, `Button`, `Frame`, `Entry`, `messagebox`.
+
+
+- **colorsys**
+  - `rgb_to_hsv(r, g, b)`
+  - `hsv_to_rgb(h, s, v)`
+
+
+- **KD_modul.py**
+  - Osztály: `KdColorManager`
+  - Függvények:
+    - `save_color_to_file(rgb, filename="saved_colors.txt")`
+    - `generate_random_color()`
+    - `hex_to_rgb(hex_color)`
+    - `calculate_brightness(rgb)`
+    - `rgb_to_hsv_normalized(rgb)`
+    - `hsv_to_rgb_normalized(h, s, v)`
